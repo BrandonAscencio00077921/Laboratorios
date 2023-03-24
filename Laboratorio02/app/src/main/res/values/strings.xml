@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Laboratorio02</string>
+    <string name="height_cm">cm</string>
+    <string name="height_add">Add</string>
+    <string name="height_text">Height</string>
+    <string name="weight_kg">Kg</string>
+    <string name="weight_add">Add</string>
+    <string name="weight_text">Weight</string>
+    <string name="app_bmi">BMI</string>
+    <string name="button_text">Calcular</string>
+</resources>
