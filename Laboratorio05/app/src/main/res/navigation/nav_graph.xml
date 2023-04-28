@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.example.laboratorio05.FirstFragment"
+        android:name="com.example.laboratorio05.ui.movie.FirstFragment"
         android:label="fragment_f_irst"
         tools:layout="@layout/fragment_f_irst" >
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.laboratorio05.SecondFragment"
+        android:name="com.example.laboratorio05.ui.movie.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
     <fragment
         android:id="@+id/thirdFragment"
-        android:name="com.example.laboratorio05.ThirdFragment"
+        android:name="com.example.laboratorio05.ui.movie.ThirdFragment"
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" />
 </navigation>

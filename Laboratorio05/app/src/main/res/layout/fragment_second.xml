@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment"
+    tools:context=".ui.movie.SecondFragment"
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
@@ -28,6 +28,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/movie_name"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
@@ -46,6 +48,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/movie_category"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
@@ -62,6 +66,8 @@ android:background="@color/cardLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/movie_description"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
@@ -79,6 +85,8 @@ android:background="@color/cardLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/movie_qualification"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
@@ -86,6 +94,7 @@ android:background="@color/cardLayout"
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/submit_button"
         android:backgroundTint="@color/buttonColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
