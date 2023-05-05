@@ -1,40 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.movie.ThirdFragment"
-    android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/sdfasd"
-        android:scaleType="fitStart"
-        android:src="@drawable/star_wars" />
-    <TextView
-        android:textColor="@color/white"
-        android:textSize="@dimen/sdfasdf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/star_wars_episodio_3_la_venganza_de_los_sithffff"/>
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.laboratorio05.ui.movie.MovieViewModel" />
+    </data>
 
-    <TextView
-        android:textSize="@dimen/uu"
-        android:textColor="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ciencia_ficcion"/>
-    <TextView
-        android:textSize="@dimen/uuu"
-        android:textColor="@color/calification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/_9_8"/>
-    <TextView
-        android:textSize="@dimen/dsdf"
-        android:textColor="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/descripcion"/>
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.movie.ThirdFragment"
+        android:orientation="vertical">
+
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sdfasd"
+            android:scaleType="fitStart"
+            android:src="@drawable/star_wars" />
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="@dimen/sdfasdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/star_wars_episodio_3_la_venganza_de_los_sithffff"/>
+
+        <TextView
+            android:textSize="@dimen/uu"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ciencia_ficcion"/>
+        <TextView
+            android:textSize="@dimen/uuu"
+            android:textColor="@color/calification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_9_8"/>
+        <TextView
+            android:textSize="@dimen/dsdf"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descripcion"/>
+    </LinearLayout>
+</layout>
+

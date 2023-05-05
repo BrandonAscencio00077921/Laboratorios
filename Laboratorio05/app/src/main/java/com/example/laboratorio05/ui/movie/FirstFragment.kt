@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.laboratorio05.R
+import com.example.laboratorio05.databinding.FragmentFIrstBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class FirstFragment : Fragment() {
@@ -16,12 +17,14 @@ class FirstFragment : Fragment() {
     private lateinit var movie: CardView
     private lateinit var Movie: CardView
 
+    private lateinit var binding: FragmentFIrstBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentFIrstBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_f_irst, container, false)
+        return binding.root
     }
 
 

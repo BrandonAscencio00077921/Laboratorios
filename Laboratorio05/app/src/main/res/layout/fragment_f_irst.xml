@@ -1,109 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="@dimen/ssa"
-    android:paddingTop="@dimen/eee"
-    tools:context=".ui.movie.FirstFragment"
-    >
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/buttonColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/baseline_add_24"/>
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.laboratorio05.ui.movie.MovieViewModel" />
+    </data>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/movie1"
-            android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/ssa"
+        android:paddingTop="@dimen/eee"
+        tools:context=".ui.movie.FirstFragment"
+        >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/cardLayout"
-            android:layout_marginBottom="@dimen/hhh"
-            app:cardCornerRadius="@dimen/qqqq">
+            android:backgroundTint="@color/buttonColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/baseline_add_24"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:backgroundTint="@color/cardLayout"
+                android:layout_marginBottom="@dimen/hhh"
+                app:cardCornerRadius="@dimen/qqqq">
 
-                <ImageView
-                    android:layout_margin="@dimen/www"
-                    android:layout_width="@dimen/sss"
-                    android:layout_height="@dimen/aaa"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/star_wars" />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/nombre"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/kkk"
+                    <ImageView
+                        android:layout_margin="@dimen/www"
+                        android:layout_width="@dimen/sss"
+                        android:layout_height="@dimen/aaa"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/star_wars" />
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/star_wars_episodio_3_la_venganza_de_los_sith"/>
-                    <TextView
-                        android:id="@+id/calificacion"
-                        android:textColor="@color/calification"
-                        android:textSize="@dimen/q"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nombre"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/kkk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/star_wars_episodio_3_la_venganza_de_los_sith"/>
+                        <TextView
+                            android:id="@+id/calificacion"
+                            android:textColor="@color/calification"
+                            android:textSize="@dimen/q"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9.8"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/movie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/cardLayout"
+                app:cardCornerRadius="@dimen/dimen">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_margin="@dimen/a"
+                        android:layout_width="@dimen/r"
+                        android:layout_height="@dimen/i"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/harry_potter" />
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="9.8"/>
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/h"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/harry_potter_y_la_piedra_filosofal"/>
+                        <TextView
+                            android:textColor="@color/calification"
+                            android:textSize="@dimen/f"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9.5"/>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/movie2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/cardLayout"
-            app:cardCornerRadius="@dimen/dimen">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-            <ImageView
-                android:layout_margin="@dimen/a"
-                android:layout_width="@dimen/r"
-                android:layout_height="@dimen/i"
-                android:scaleType="fitXY"
-                android:src="@drawable/harry_potter" />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            <TextView
-                android:textColor="@color/white"
-                android:textSize="@dimen/h"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/harry_potter_y_la_piedra_filosofal"/>
-            <TextView
-                android:textColor="@color/calification"
-                android:textSize="@dimen/f"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9.5"/>
-            </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

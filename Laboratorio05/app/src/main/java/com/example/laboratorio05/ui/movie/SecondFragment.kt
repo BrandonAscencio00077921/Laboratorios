@@ -9,14 +9,16 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.laboratorio05.R
 import com.example.laboratorio05.data.model.MovieModel
+import com.example.laboratorio05.databinding.FragmentSecondBinding
 import com.google.android.material.textfield.TextInputEditText
 
 
 class SecondFragment : Fragment() {
 
-        private lateinit var Name : EditText
+    private lateinit var Name : EditText
     private lateinit var Category: EditText
     private lateinit var Description: EditText
     private lateinit var Qualification: EditText
@@ -26,42 +28,43 @@ class SecondFragment : Fragment() {
         MovieViewModel.Factory
     }
 
+    private lateinit var binding: FragmentSecondBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        binding = FragmentSecondBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        bind()
-        setOnClick()
+        setViewModel()
+        observeStatus()
     }
 
-    fun bind(){
-        Name = view?.findViewById(R.id.movie_name) !!
-        Category = view?.findViewById(R.id.movie_category) !!
-        Description = view?.findViewById(R.id.movie_description) !!
-        Qualification = view?.findViewById(R.id.movie_qualification) !!
-
-        Submit = view?.findViewById(R.id.submit_button) !!
+    private fun setViewModel() {
+        binding.viewmodel = movieViewModel
     }
+    private fun observeStatus() {
+        movieViewModel.status.observe(viewLifecycleOwner){
+            status -> when{
+                status.equals(MovieViewModel.WRONG_INFORMATION) ->{
+                    Log.d("APP_TAG", status)
+                    movieViewModel.clearStatus()
+                }
+                status.equals(MovieViewModel.MOVIE_CREATED) ->{
+                    Log.d("APP_TAG", status)
+                    Log.d("APP_TAG", movieViewModel.getMovies().toString())
 
-    fun setOnClick(){
-        Submit.setOnClickListener{_->
-            var name = Name.text.toString()
-            var cat = Category.text.toString()
-            var desc = Description.text.toString()
-            var qual = Qualification.text.toString()
-            var newMovie = MovieModel(name, cat, desc, qual)
-
-            movieViewModel.addMovies(newMovie)
-
-            Log.d("movie", movieViewModel.getMovies().toString())
+                    movieViewModel.clearStatus()
+                    findNavController().popBackStack()
+                }
+            }
         }
     }
+
 
 }
