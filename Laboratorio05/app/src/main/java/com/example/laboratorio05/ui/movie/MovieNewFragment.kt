@@ -10,13 +10,11 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.laboratorio05.R
-import com.example.laboratorio05.data.model.MovieModel
-import com.example.laboratorio05.databinding.FragmentSecondBinding
-import com.google.android.material.textfield.TextInputEditText
+import com.example.laboratorio05.databinding.FragmentNewMovieBinding
 
 
-class SecondFragment : Fragment() {
+
+class MovieNewFragment : Fragment() {
 
     private lateinit var Name : EditText
     private lateinit var Category: EditText
@@ -28,12 +26,12 @@ class SecondFragment : Fragment() {
         MovieViewModel.Factory
     }
 
-    private lateinit var binding: FragmentSecondBinding
+    private lateinit var binding: FragmentNewMovieBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSecondBinding.inflate(inflater, container, false)
+        binding = FragmentNewMovieBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }

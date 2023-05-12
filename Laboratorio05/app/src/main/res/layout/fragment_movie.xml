@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.movie.ThirdFragment"
+        tools:context=".ui.movie.MovieFragment"
         android:orientation="vertical">
 
         <!-- TODO: Update blank fragment layout -->
@@ -25,26 +25,25 @@
             android:textSize="@dimen/sdfasdf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/star_wars_episodio_3_la_venganza_de_los_sithffff"/>
-
+            android:text="@{viewmodel.name}"/>
         <TextView
             android:textSize="@dimen/uu"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ciencia_ficcion"/>
+            android:text="@{viewmodel.category}"/>
         <TextView
             android:textSize="@dimen/uuu"
             android:textColor="@color/calification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/_9_8"/>
+            android:text="@{viewmodel.qualification}"/>
         <TextView
             android:textSize="@dimen/dsdf"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/descripcion"/>
+            android:text="@{viewmodel.description}"/>
     </LinearLayout>
 </layout>
 
